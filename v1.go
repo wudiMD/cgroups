@@ -37,8 +37,11 @@ func V1() ([]Subsystem, error) {
 	var enabled []Subsystem
 	for _, s := range pathers(subsystems) {
 		// check and remove the default groups that do not exist
+		if s.Name()!="blkio"{
 		if _, err := os.Lstat(s.Path("/")); err == nil {
 			enabled = append(enabled, s)
+			fmt.Printf(s.Name())
+		}
 		}
 	}
 	return enabled, nil
@@ -79,3 +82,18 @@ func v1MountPoint() (string, error) {
 	}
 	return "", ErrMountPointNotExist
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
