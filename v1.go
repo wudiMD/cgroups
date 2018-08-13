@@ -35,7 +35,7 @@ func V1() ([]Subsystem, error) {
 		return nil, err
 	}
 	var enabled []Subsystem
-	for _, s := range pathers(subsystems) {
+	/*for _, s := range pathers(subsystems) {
 		// check and remove the default groups that do not exist
 		if s.Name()!="blkio"{
 		if _, err := os.Lstat(s.Path("/")); err == nil {
@@ -43,7 +43,7 @@ func V1() ([]Subsystem, error) {
 			fmt.Printf(s.Name())
 		}
 		}
-	}
+	}*/
 	return enabled, nil
 }
 
