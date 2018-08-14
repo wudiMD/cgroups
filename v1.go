@@ -44,6 +44,7 @@ func V1() ([]Subsystem, error) {
 		}
 		}
 	}*/
+	fmt.Printf("This is cgroup v1 !!!!!!!!!!!!!!!!!")
 	return enabled, nil
 }
 
